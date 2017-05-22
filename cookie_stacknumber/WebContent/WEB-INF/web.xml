@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>cookie_stacknumber</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- Cookie 숫자 누적처리 - StackNumber -->
+  <servlet>
+  	<servlet-name>stackNumber</servlet-name>
+  	<servlet-class>servlet.cookie.stacknum.StackNumberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>stackNumber</servlet-name>
+  	<url-pattern>/cookie/stack/stackNumber</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>showStackNumber</servlet-name>
+  	<servlet-class>servlet.cookie.stacknum.ShowStackNumberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>showStackNumber</servlet-name>
+  	<url-pattern>/cookie/stack/showStackNumber</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>removeStackNumber</servlet-name>
+  	<servlet-class>servlet.cookie.stacknum.RemoveStackNumberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>removeStackNumber</servlet-name>
+  	<url-pattern>/cookie/stack/removeStackNumber</url-pattern>
+  </servlet-mapping>
+</web-app>
